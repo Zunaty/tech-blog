@@ -4,11 +4,13 @@ const sequelize = require('../config/connection');
 
 class User extends Model {
 
+    // Checking password to the one in the database
     checkPass(loginPw) {
         return bcrypt.compareSync(loginPw, this.password);
     }
 }
 
+// User set up to have a Username, Email, and Password
 User.init(
     {
         id: {

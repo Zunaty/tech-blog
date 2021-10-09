@@ -12,4 +12,12 @@ router.get('/', (req, res) => {
     });
 });
 
+router.get('/addpost', withAuth, (req, res) => {
+    res.render('addpost', {
+        loggedIn: req.session.loggedIn,
+        dashloggedIn: req.session.loggedIn,
+        dashuser: req.session.username
+    });
+});
+
 module.exports = router;
