@@ -1,0 +1,35 @@
+<div class="column is-one-third-fullhd is-one-third-widescreen is-half-tablet">
+  <div class="box"> 
+    <div class="container mb-3">
+      <button class="delete is-pulled-right" onclick="deletebtn({{id}})"></button>
+      <h1 class="title">{{job.job_title}}</h1>
+    </div>
+    
+    <div class="container my-3">
+      <h2 class="subtitle">{{job.job_company}} <span class="is-pulled-right">${{job.job_salary}}</span></h2>
+      <p>{{job.job_des}}</p>
+    </div>
+
+    <div class="container mt-5">
+      <h3>Current Status: <span class="is-pulled-right">{{status.job_status}}</span></h2>
+    </div>
+
+    <div class="container mt-3">
+      <a href="https://{{{format_url job.job_link}}}" class="button">Job Link</a>
+      <div class="select is-pulled-right">
+        <select onchange="statusbtn({{id}}, (this.value))">
+          <option value="0">Select Status</option>
+          <option value="1">Applied</option>
+          <option value="2">Phone Interview</option>
+          <option value="3">1st Interview</option>
+          <option value="4">2nd Interview</option>
+          <option value="5">3rd Interview</option>
+          <option value="6">Rejected</option>
+          <option value="7">No Response</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="/javascript/delete-post.js"></script>

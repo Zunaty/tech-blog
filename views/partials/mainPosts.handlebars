@@ -1,0 +1,16 @@
+<div class="column is-one-third-fullhd is-one-third-widescreen is-half-tablet">
+  <div class="box"> 
+    <div class="container mb-3">
+      <button class="delete is-pulled-right" onclick="deletebtn({{post.id}})"></button>
+      <h1 class="title">{{post.title}}</h1>
+    </div>
+    
+    <div class="container my-3">
+      <h2 class="subtitle">{{post.date}}</h2>
+      <p>{{post.body}}</p>
+    </div>
+
+  </div>
+</div>
+
+<script src="/javascript/delete-post.js"></script>
