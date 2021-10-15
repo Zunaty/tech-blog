@@ -1,0 +1,50 @@
+<div class="hero">
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-5">
+
+                    <form class="box signupForm">
+                        <h3 class="tittle has-text-centered is-size-3 mb-5"><strong>Create your account</strong></h3>
+                        <!-- User username -->
+                        <div class="field">
+                            <label class="label">Username</label>
+                            <div class="control">
+                                <input class="input" type="text" placeholder="e.g Nameless_guy" id="signup-username">
+                            </div>
+                            <!-- if possible, we could implement the option to let the user know if a username is available -->
+                            <!-- <p class="help is-success">This username is available</p> -->
+                        </div>
+                        <!-- User email -->
+                        <div class="field">
+                            <label class="label">Email</label>
+                            <div class="control">
+                                <input class="input" type="email" placeholder="e.g. you@somedomain.com" id="signup-email">
+                            </div>
+                        </div>
+                        <!-- User password -->
+                        <div class="field">
+                            <lable class="label">Password</lable>
+                            <p class="control">
+                                <input class="input" type="password" placeholder="Password" id="signup-password">
+                            </p>
+                        </div>
+                        <!-- Creating a user -->
+                        <div class="field is-grouped is-grouped-centered">
+                            <p class="control">
+                                <button type="submit" class="button is-primary" id="signSubmit">Submit</button>
+                            </p>
+                            <p class="control">
+                                <a href="/" class="button is-light">Cancel</a>
+                            </p>
+                        </div>
+                        <h3 class="title has-text-centered is-size-6 mt-5">Already have an account? click <a href="/login" class="link">here</a> to login!</h3>
+                    </form>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/javascript/signup.js"></script>

@@ -1,0 +1,36 @@
+<div class="hero">
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-5">
+
+                    <form class="box loginForm">
+                        <h3 class="tittle has-text-centered is-size-3 mb-5"><strong>Login</strong></h3>
+                        <!-- Asking for Email -->
+                        <div class="field">
+                            <label class="label">Email</label>
+                            <div class="control">
+                                <input type="email" class="input" placeholder="john@example.com" id="userEmail">
+                            </div>
+                        </div>
+                        <!-- Asking for Password -->
+                        <div class="field">
+                            <label class="label">Password</label>
+                            <div class="control">
+                                <input type="password" class="input" placeholder="*******" id="userPass">
+                            </div>
+                        </div>
+                        {{!-- Login Btn --}}
+                        <div class="field">
+                            <button type="submit" class="button is-primary">Login</button>
+                        </div>
+                        <h3 class="title has-text-centered is-size-6 mt-5">Don't have an account? click <a href="/signup" class="link">here</a> to create one!</h3>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/javascript/login.js"></script>
