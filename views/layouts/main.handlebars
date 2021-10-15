@@ -3,54 +3,61 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tech Blog</title>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
 </head>
 
-<body>
+<body class="has-background-grey-lighter">
     <header>
-        <nav class="navbar is-max-desktop">
-            <a href="/" class="navbar-item title mb-0"><img src="https://img.icons8.com/windows/32/000000/google-blog-search.png"/>Tech Blog</a>
 
-            <div class="navbar-brand">
-                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
-                    data-target="navbarMenu">
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                </a>
-            </div>
+        <section class="hero">
+            <div class="hero-body has-background-white-bis">
 
-            <div id="navbarMenu" class="navbar-menu">
+                <nav class="navbar is-max-desktop">
+                    <a href="/" class="navbar-item title mb-0"><img src="https://img.icons8.com/windows/32/000000/google-blog-search.png"/>Tech Blog</a>
 
-                {{!-- Buttons at the end of the navbar --}}
-                <div class="navbar-end">
-                    <div class="navbar-item">
-                        <div class="buttons">
-                            {{#if loggedIn}}
-                                {{#if dashloggedIn}}
-                                    <a href="/dashboard/profile" class="button is-primary">{{dashuser}}</a>
-                                {{else}}
-                                    <a href="/dashboard" class="button is-primary">My Posts</a>
-                                {{/if}}
-                                    <a id="logoutUser" class="button is-danger">Log out</a>
-                            {{else}}
-                                <a href="/signup" class="button is-primary"><strong>Sign up</strong></a>
-                                <a href="/login" class="button is-info">Log in</a>
-                            {{/if}}
-                        </div>
+                    <div class="navbar-brand">
+                        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                            data-target="navbarMenu">
+                            <span aria-hidden="true"></span>
+                            <span aria-hidden="true"></span>
+                            <span aria-hidden="true"></span>
+                        </a>
                     </div>
-                </div>
+
+                    <div id="navbarMenu" class="navbar-menu">
+
+                        {{!-- Buttons at the end of the navbar --}}
+                        <div class="navbar-end">
+                            <div class="navbar-item">
+                                <div class="buttons">
+                                    {{#if loggedIn}}
+                                        {{#if dashloggedIn}}
+                                            <a href="/dashboard/profile" class="button is-primary">{{dashuser}}</a>
+                                        {{else}}
+                                            <a href="/dashboard" class="button is-primary">My Posts</a>
+                                        {{/if}}
+                                            <a id="logoutUser" class="button is-danger">Log out</a>
+                                    {{else}}
+                                        <a href="/signup" class="button is-primary"><strong>Sign up</strong></a>
+                                        <a href="/login" class="button is-info">Log in</a>
+                                    {{/if}}
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </nav>
 
             </div>
-        </nav>
+        </section>
+
     </header>
 
     <main class="section">
-        {{{ Body }}}
+        {{{ body }}}
     </main>
 
     <footer class="footer mt-auto">
