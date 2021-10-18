@@ -28,6 +28,11 @@
                     </div>
 
                     <div id="navbarMenu" class="navbar-menu">
+                        <div class="navbar-start">
+                            {{#if dashloggedIn}}
+                                <a href="/dashboard/addpost" class="navbar-item mt-3 button is-success"><i class="fas fa-plus mr-2"></i>Add Post</a>
+                            {{/if}}
+                        </div>
 
                         {{!-- Buttons at the end of the navbar --}}
                         <div class="navbar-end">
