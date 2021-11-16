@@ -37,4 +37,34 @@ router.get('/signup', (req, res) => {
     res.render('signup');
 });
 
+router.get('/post/:id', (req, res) => {
+    Post.findAll({
+        where: {
+            id: req.params.id
+        },
+        include: [
+            {
+                model: Comment,
+                where: {
+                    id: req.params.id
+                }
+            }
+        ]
+    })
+    .then(bothData => {
+        const bData = bothData.map(both => both.get({ plain: true }));
+
+        console.log(bData)
+
+        res.render('comments', {
+            bData,
+            loggedIn: req.session.loggedIn
+        });
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    })
+});
+
 module.exports = router;

@@ -1,0 +1,41 @@
+<div class="columns is-centered is-half-tablet">
+  <div class="box">
+    <div class="container mb-3">
+      <h1 class="title">{{title}}</h1>
+    </div>
+
+    <div class="container my-3">
+      <h2 class="subtitle">{{date}}</h2>
+      <p>{{body}}</p>
+    </div>
+
+    {{!-- Add a comment section --}}
+    <form>
+      {{!-- Comment text goes here --}}
+      <div class="field">
+        <div class="control">
+          <textarea class="textarea" placeholder="Add your comment here..." id="addcomment-text"></textarea>
+        </div>
+      </div>
+
+      {{!-- Holding the post id --}}
+      <div class="field">
+        <div class="control">
+          <textarea class="is-hidden" id="addcomment-id">{{id}}</textarea>
+        </div>
+      </div>
+
+      {{!-- buttons --}}
+      <div class="field is-grouped is-grouped-centered mt-5">
+        <p class="control">
+          <button type="submit" class="button is-primary" id="editPostSubmit">Add Comment</button>
+        </p>
+        <p class="control">
+          <a href="/" class="button is-light">Cancel</a>
+        </p>
+      </div>
+    </form> 
+  </div>
+</div>
+
+<script src="/javascript/add-comment.js"></script>

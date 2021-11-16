@@ -1,6 +1,10 @@
 // Wait for the signup to be filled out
 async function signupFormHandler(event) {
     event.preventDefault();
+
+    const formSelect = document.getElementsByClassName('signupForm')
+    const errorDiv = document.createElement('div');
+    errorDiv.innerHTML = "Account already exists";
   
     const username = document.querySelector('#signup-username').value.trim();
     const email = document.querySelector('#signup-email').value.trim();
@@ -21,6 +25,9 @@ async function signupFormHandler(event) {
             document.location.replace('/dashboard/');
         } else {
             console.log(response.statusText);
+
+            const formSelect = document.getElementsByClassName('signupForm');
+            formSelect.innerHTML = "Account already exists";
         }
     }
 };
